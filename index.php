@@ -46,7 +46,7 @@
             $date = date("Y-m-d");
             // Insert data
             $sql_insert = "INSERT INTO [dbo].[Registration] (name, email, job, date) 
-                        VALUES ('name','email','job', STR_TO_DATE('$date', '%Y/%m/%d'))";
+                        VALUES ('name','email','job', '$date')";
             $stmt = $conn->prepare($sql_insert);
             $stmt->bindValue(1, $name);
             $stmt->bindValue(2, $email);
